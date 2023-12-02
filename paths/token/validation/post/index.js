@@ -47,7 +47,7 @@ exports.handler = vandium.generic()
             connection.end(); 
           
             // API Gateway
-            const client = new APIGatewayClient(config);
+            const client = new APIGatewayClient({region: 'us-east-1'});
             const input = {
               name: github_results.login,
               description: "Trading in GitHub Personal Access Token for API Key.",
