@@ -1,0 +1,34 @@
+left:
+
+  - title: Home
+    url: https://developer.apis.io/
+
+  - title: About
+    url: https://developer.apis.io/about
+
+  - title: Getting Started
+    url: https://developer.apis.io/getting-started     
+
+  - title: Authentication
+    url: https://developer.apis.io/authentication   
+
+  - title: Documentation
+    url: https://developer.apis.io/documentation
+
+  - title: Plans
+    url: https://developer.apis.io/plans
+
+  - title: SDKs
+    url: https://developer.apis.io/sdks 
+
+  - title: Blog
+    url: https://developer.apis.io/blog
+
+  - title: Videos
+    url: https://developer.apis.io/videos
+
+  - title: Support
+    url: https://developer.apis.io/support
+
+right:
+

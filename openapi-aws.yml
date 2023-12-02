@@ -1,0 +1,63 @@
+openapi: 3.0.1
+info:
+  title: APIs.io Authentication API
+  description: This is the API for managing authentication used as part of the ratings engine for the APIs.io search engine.
+  version: V1
+servers:
+- url: https://authentication-api.apis.io
+paths:
+
+  /token/validation:
+    post:
+      operationId: submitAuthentication
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/API'
+        required: true
+      responses:
+        201:
+          description: 201 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Authentication'
+      security:
+      - api_key: []
+      x-amazon-apigateway-integration:
+        httpMethod: POST
+        uri: arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:007596076917:function:m-s-apis-io-authentication-po/invocations
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: when_no_match
+        contentHandling: CONVERT_TO_TEXT
+        type: aws
+      x-codegen-request-body-name: API
+
+  schemas:
+
+    Validate:
+      type: object
+      required:
+      - token
+
+      properties:
+      
+        token:
+          type: string
+          description: A valid GitHub Personal Access Token
+          minLength: 25
+
+    Validation:
+      type: object
+      required:
+      - name
+
+      properties:
+      
+        username:
+          type: string
+          description: A GitHub User name.
+          minLength: 5
