@@ -72,20 +72,9 @@ exports.handler = vandium.generic()
                     };
 
                     console.log(input2);
-        
-                    (async function () {
-        
-                          try {
-                            const command = new CreateApiKeyCommand(input);
-                            const response = await client.send(command);
-        
-                            callback( null, response );  
-                            connection.end(); 
-        
-                        } catch (err) {
-                            console.error(err)
-                        }
-                    })();                     
+       
+                    callback( null, input2 );  
+                    connection.end();                     
                     
 
                 } catch (err) {
