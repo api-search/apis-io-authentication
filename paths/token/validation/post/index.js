@@ -71,15 +71,8 @@ exports.handler = vandium.generic()
                       keyId: key_id, 
                       keyType: "API_KEY",
                     };
-
-                    //var command = new CreateUsagePlanKeyCommand(input2);
-                    //var response = await client.send(command);        
                     
-                    var r = {};
-                    r.response = response;
-                    r.input = input2;
-
-                    callback( null, r );  
+                    callback( null, input2);  
                     connection.end();                           
                     
 
