@@ -62,20 +62,8 @@ exports.handler = vandium.generic()
                   try {
                     const key_command = new CreateApiKeyCommand(input);
                     const key_response = await client.send(key_command);
-
-                    var key_id = key_response.id;
-
-                    const input2 = {
-                      usagePlanId: "ql1nic",
-                      keyId: key_id, 
-                      keyType: "API_KEY", // required
-                    };
-
-                    var r = {};
-                    r.response = key_response;
-                    r.input = input2;
         
-                    callback( null, r );  
+                    callback( null, key_response);  
                     connection.end();                   
                     
 
