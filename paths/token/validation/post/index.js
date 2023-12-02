@@ -2,7 +2,7 @@ const vandium = require('vandium');
 const mysql  = require('mysql');
 const https  = require('https');
 const yaml = require('js-yaml');
-const { APIGatewayClient, CreateApiKeyCommand } = require("@aws-sdk/client-api-gateway");
+const { APIGatewayClient, CreateApiKeyCommand, CreateUsagePlanKeyCommand } = require("@aws-sdk/client-api-gateway");
 
 exports.handler = vandium.generic()
   .handler( (event, context, callback) => {
@@ -71,10 +71,18 @@ exports.handler = vandium.generic()
                       keyType: "API_KEY",
                     };
 
-                    console.log(input2);
-       
-                    callback( null, input2 );  
-                    connection.end();                     
+                    (async function () {
+        
+                          try {
+                            const command = new CreateUsagePlanKeyCommand(input2);
+                            const response = await client.send(command);        
+                            callback( null, response );  
+                            connection.end();         
+                        } catch (err) {     
+                          callback( null, err );  
+                          connection.end(); 
+                        }
+                    })();                     
                     
 
                 } catch (err) {
