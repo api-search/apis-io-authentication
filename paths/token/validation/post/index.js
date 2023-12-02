@@ -70,7 +70,7 @@ exports.handler = vandium.generic()
                   var response = {};
                   response['username'] = "none";            
                   response['error'] = err;      
-                  callback( null, github_results );  
+                  callback( null, response );  
                   connection.end();  
                 }
             })();            
