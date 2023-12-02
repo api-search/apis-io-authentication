@@ -63,8 +63,22 @@ exports.handler = vandium.generic()
                   const key_command = new CreateApiKeyCommand(input);
                   const key_response = await client.send(key_command);
       
-                  callback( null, key_response);  
-                  connection.end();                                       
+                  try{
+                    
+                    const plan_command = new CreateUsagePlanKeyCommand(input2);
+                    const plan_response = await client.send(plan_command);                          
+
+                    callback( null, plan_response);  
+                    connection.end();     
+
+                  }     
+                 catch (err) {
+                  var response = {};
+                  response['username'] = "none";            
+                  response['error'] = err;      
+                  callback( null, response );  
+                  connection.end();  
+                  }                                               
 
                 } catch (err) {
                   var response = {};
