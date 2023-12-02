@@ -67,6 +67,12 @@ exports.handler = vandium.generic()
 
                     try{
 
+                      const input2 = {
+                        usagePlanId: "ql1nic",
+                        keyId: key_response.id,
+                        keyType: "API_KEY"
+                      }                      
+
                       const plan_command = new CreateUsagePlanKeyCommand(input2);
                       const plan_response = await client.send(plan_command);                          
 
