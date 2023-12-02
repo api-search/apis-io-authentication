@@ -40,11 +40,6 @@ exports.handler = vandium.generic()
           var github_results = JSON.parse(body);
           
           if(github_results.login){
-
-            var response = {};
-            response['username'] = github_results.login;            
-            callback( null, response );  
-            connection.end(); 
           
             // API Gateway
             const client = new APIGatewayClient({region: 'us-east-1'});
