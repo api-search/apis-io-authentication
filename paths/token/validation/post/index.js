@@ -60,8 +60,9 @@ exports.handler = vandium.generic()
             (async function () {
 
                   try {
-                    const command = new CreateApiKeyCommand(input1);
-                    const response = await client.send(command);
+
+                    var command = new CreateApiKeyCommand(input1);
+                    var response = await client.send(command);
 
                     var key_id = response.id;
 
@@ -71,18 +72,10 @@ exports.handler = vandium.generic()
                       keyType: "API_KEY",
                     };
 
-                    (async function () {
-        
-                          try {
-                            const command = new CreateUsagePlanKeyCommand(input2);
-                            const response = await client.send(command);        
-                            callback( null, response );  
-                            connection.end();         
-                        } catch (err) {     
-                          callback( null, err );  
-                          connection.end(); 
-                        }
-                    })();                     
+                    var command = new CreateUsagePlanKeyCommand(input2);
+                    var response = await client.send(command);        
+                    callback( null, response );  
+                    connection.end();                           
                     
 
                 } catch (err) {
