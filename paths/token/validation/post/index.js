@@ -64,7 +64,7 @@ exports.handler = vandium.generic()
                   const key_response = await client.send(key_command);
       
                   try{
-                    
+
                     const plan_command = new CreateUsagePlanKeyCommand(input2);
                     const plan_response = await client.send(plan_command);                          
 
@@ -74,7 +74,7 @@ exports.handler = vandium.generic()
                   }     
                  catch (err) {
                   var response = {};
-                  response['username'] = "none";            
+                  response['username'] = github_results.login;            
                   response['error'] = err;      
                   callback( null, response );  
                   connection.end();  
@@ -82,7 +82,7 @@ exports.handler = vandium.generic()
 
                 } catch (err) {
                   var response = {};
-                  response['username'] = "none";            
+                  response['username'] = github_results.login;            
                   response['error'] = err;      
                   callback( null, response );  
                   connection.end();  
