@@ -75,16 +75,18 @@ exports.handler = vandium.generic()
 
                       const plan_command = new CreateUsagePlanKeyCommand(input2);
                       const plan_response = await client.send(plan_command);                          
-
-                      callback( null, plan_response);  
+                      
+                      var response = {};
+                      response.username = github_results.login;            
+                      response.message = "Added as key to API plan."
+                      callback( null, response );  
                       connection.end();     
 
                     }     
                     catch (err) {
                     var response = {};
-                    response['username'] = github_results.login;            
-                    response['error1'] = err;      
-                    response['key_response1'] = key_response;
+                    response.username = github_results.login;            
+                    response.message = "Problem adding the plan."
                     callback( null, response );  
                     connection.end();  
                     }   
@@ -93,9 +95,8 @@ exports.handler = vandium.generic()
 
                 } catch (err) {
                   var response = {};
-                  response['username'] = github_results.login;            
-                  response['error2'] = err;      
-                  response['key_response2'] = key_response;
+                  response.username = github_results.login;            
+                  response.message = "Problem adding the key."
                   callback( null, response );  
                   connection.end();  
                 }
@@ -104,7 +105,8 @@ exports.handler = vandium.generic()
 
           }else{
             var response = {};
-            response['username'] = "none";            
+            response.username = 'none';            
+            response.message = "Not valid GitHub token."         
             callback( null, github_results );  
             connection.end();             
           }
