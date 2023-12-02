@@ -63,27 +63,33 @@ exports.handler = vandium.generic()
                   const key_command = new CreateApiKeyCommand(input);
                   const key_response = await client.send(key_command);
       
-                  try{
+                  (async function () {
 
-                    const plan_command = new CreateUsagePlanKeyCommand(input2);
-                    const plan_response = await client.send(plan_command);                          
+                    try{
 
-                    callback( null, plan_response);  
-                    connection.end();     
+                      const plan_command = new CreateUsagePlanKeyCommand(input2);
+                      const plan_response = await client.send(plan_command);                          
 
-                  }     
-                 catch (err) {
-                  var response = {};
-                  response['username'] = github_results.login;            
-                  response['error'] = err;      
-                  callback( null, response );  
-                  connection.end();  
-                  }                                               
+                      callback( null, plan_response);  
+                      connection.end();     
+
+                    }     
+                  catch (err) {
+                    var response = {};
+                    response['username'] = github_results.login;            
+                    response['error'] = err;      
+                    response['key_response'] = key_response;
+                    callback( null, response );  
+                    connection.end();  
+                    }   
+                  
+                  })(); 
 
                 } catch (err) {
                   var response = {};
                   response['username'] = github_results.login;            
                   response['error'] = err;      
+                  response['key_response'] = key_response;
                   callback( null, response );  
                   connection.end();  
                 }
