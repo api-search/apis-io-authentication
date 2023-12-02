@@ -1,5 +1,7 @@
 const vandium = require('vandium');
 const mysql  = require('mysql');
+const https  = require('https');
+const yaml = require('js-yaml');
 
 exports.handler = vandium.generic()
   .handler( (event, context, callback) => {
