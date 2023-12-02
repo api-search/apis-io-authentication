@@ -1,9 +1,9 @@
-# APIs.io Rules API
-This is the API for managing rules used in the APis.io search engine.
+# APIs.io Authentication API
+This is the API for managing authentication used in the APis.io search engine.
 
 There are two things going on this repository.
 
-- **AWS Lambda API** - The actual deployment of the APIs.io Rules API.
+- **AWS Lambda API** - The actual deployment of the APIs.io Authentication API.
 - **API Documentation** - The Jekyll and Swagger UI document for the API.
 
 The two layers are defined by a separate set of files.
