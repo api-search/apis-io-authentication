@@ -4,7 +4,7 @@ info:
   description: This is the API for managing authentication used as part of the ratings engine for the APIs.io search engine.
   version: V1
 servers:
-- url: https://authentication-api.apis.io
+- url: https://auth-api.apis.io
 paths:
 
   /token/validation:
@@ -14,7 +14,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/API'
+              $ref: '#/components/schemas/Validate'
         required: true
       responses:
         201:
@@ -22,7 +22,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Authentication'
+                $ref: '#/components/schemas/Validation'
       security:
       - api_key: []
       x-amazon-apigateway-integration:
@@ -35,6 +35,8 @@ paths:
         contentHandling: CONVERT_TO_TEXT
         type: aws
       x-codegen-request-body-name: API
+
+components:
 
   schemas:
 

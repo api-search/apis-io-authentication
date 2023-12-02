@@ -60,7 +60,7 @@ jobs:
       - name: /token/validation post lambda deploy zip
         uses: api-search/search-api@main
         with:
-          args: zip -qq -r m-s-apis-io-tokenvalidation-g.zip paths/token/validation/post/index.js node_modules
+          args: zip -qq -r m-s-apis-io-tokenvalidation-p.zip paths/token/validation/post/index.js node_modules
       - name: videos post lambda deploy
         uses: appleboy/lambda-action@master
         with:
