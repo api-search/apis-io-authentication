@@ -2,7 +2,7 @@ const vandium = require('vandium');
 const mysql  = require('mysql');
 const https  = require('https');
 const yaml = require('js-yaml');
-const { APIGatewayClient, CreateApiKeyCommand } = require("@aws-sdk/client-api-gateway");
+const { APIGatewayClient, CreateApiKeyCommand, CreateUsagePlanKeyCommand } = require("@aws-sdk/client-api-gateway");
 
 exports.handler = vandium.generic()
   .handler( (event, context, callback) => {
@@ -74,11 +74,11 @@ exports.handler = vandium.generic()
                       connection.end();     
 
                     }     
-                  catch (err) {
+                    catch (err) {
                     var response = {};
                     response['username'] = github_results.login;            
-                    response['error'] = err;      
-                    response['key_response'] = key_response;
+                    response['error1'] = err;      
+                    response['key_response1'] = key_response;
                     callback( null, response );  
                     connection.end();  
                     }   
@@ -88,8 +88,8 @@ exports.handler = vandium.generic()
                 } catch (err) {
                   var response = {};
                   response['username'] = github_results.login;            
-                  response['error'] = err;      
-                  response['key_response'] = key_response;
+                  response['error2'] = err;      
+                  response['key_response2'] = key_response;
                   callback( null, response );  
                   connection.end();  
                 }
