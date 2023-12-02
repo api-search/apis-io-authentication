@@ -38,10 +38,19 @@ exports.handler = vandium.generic()
 
           var github_results = JSON.parse(body);
           
-          var response = {};
-          response['pulling'] = "No more to publish.";            
-          callback( null, github_results );  
-          connection.end();  
+          if(github_results.login){
+
+            var response = {};
+            response['username'] = github_results.login;            
+            callback( null, response );  
+            connection.end(); 
+
+          }else{
+            var response = {};
+            response['username'] = "none";            
+            callback( null, github_results );  
+            connection.end();             
+          }
 
         });
         
