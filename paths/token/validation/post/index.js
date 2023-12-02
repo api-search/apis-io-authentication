@@ -50,7 +50,6 @@ exports.handler = vandium.generic()
               enabled: true,
               generateDistinctId: false,
               value: token,
-
               customerId: github_results.login,
               tags: {
                 "domain": "apis.io",
@@ -59,16 +58,20 @@ exports.handler = vandium.generic()
 
             (async function () {
 
-                  try {
-                    const key_command = new CreateApiKeyCommand(input);
-                    const key_response = await client.send(key_command);
-        
-                    callback( null, key_response);  
-                    connection.end();                   
-                    
+                try {
+
+                  const key_command = new CreateApiKeyCommand(input);
+                  const key_response = await client.send(key_command);
+      
+                  callback( null, key_response);  
+                  connection.end();                                       
 
                 } catch (err) {
-                    console.error(err)
+                  var response = {};
+                  response['username'] = "none";            
+                  response['error'] = err;      
+                  callback( null, github_results );  
+                  connection.end();  
                 }
             })();            
 
