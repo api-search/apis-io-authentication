@@ -2,6 +2,7 @@ const vandium = require('vandium');
 const mysql  = require('mysql');
 const https  = require('https');
 const yaml = require('js-yaml');
+const { APIGatewayClient, CreateApiKeyCommand } = require("@aws-sdk/client-api-gateway");
 
 exports.handler = vandium.generic()
   .handler( (event, context, callback) => {
@@ -44,6 +45,34 @@ exports.handler = vandium.generic()
             response['username'] = github_results.login;            
             callback( null, response );  
             connection.end(); 
+          
+            // API Gateway
+            const client = new APIGatewayClient(config);
+            const input = {
+              name: github_results.login,
+              description: "Trading in GitHub Personal Access Token for API Key.",
+              enabled: true,
+              generateDistinctId: false,
+              value: token,
+
+              customerId: github_results.login,
+              tags: {
+                "domain": "apis.io",
+              },
+            };
+
+            (async function () {
+
+                  try {
+                    const command = new CreateApiKeyCommand(input);
+                    const response = await client.send(command);
+                    callback( null, response );  
+                    connection.end();                       
+                } catch (err) {
+                    console.error(err)
+                }
+            })();            
+
 
           }else{
             var response = {};
