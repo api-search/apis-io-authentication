@@ -43,6 +43,7 @@ exports.handler = vandium.generic()
           
             // API Gateway
             const client = new APIGatewayClient({region: 'us-east-1'});
+
             const input = {
               name: github_results.login,
               description: "Trading in GitHub Personal Access Token for API Key.",
@@ -61,8 +62,30 @@ exports.handler = vandium.generic()
                   try {
                     const command = new CreateApiKeyCommand(input);
                     const response = await client.send(command);
-                    callback( null, response );  
-                    connection.end();                       
+
+                    var key_id = response.id;
+
+                    const input = {
+                      usagePlanId: "ql1nic",
+                      keyId: key_id, 
+                      keyType: "API_KEY",
+                    };
+        
+                    (async function () {
+        
+                          try {
+                            const command = new CreateApiKeyCommand(input);
+                            const response = await client.send(command);
+        
+                            callback( null, response );  
+                            connection.end(); 
+        
+                        } catch (err) {
+                            console.error(err)
+                        }
+                    })();                     
+                    
+
                 } catch (err) {
                     console.error(err)
                 }
