@@ -102,7 +102,6 @@ exports.handler = vandium.generic()
                 }
             })();            
 
-
           }else{
             var response = {};
             response.username = 'none';            

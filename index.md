@@ -14,4 +14,5 @@ This API is used to authenticate with the APIs.io API, using a personal access t
         margin: 0px;
     }
 </style>
-We wanted to make it as easy as possible to setup your API key without having to create yet another account you will have to manage, so we make the assumption you at least already have a GitHub account--next we'll fire up LinkedIn and Google.
+
+We are just getting started developing these APIs and they will change rapidly, we don't recommend building anything production around them at this point, until they mature a little bit more.
