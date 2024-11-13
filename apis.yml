@@ -1,4 +1,4 @@
-aid: apis-io
+aid: apis-io-authentication
 specificationVersion: '0.18'
 name: APIs.io Authentication API
 description: >-
@@ -14,7 +14,7 @@ tags:
 
 apis:
 
-  - aid: apis-io:authentication-api
+  - aid: apis-io-authentication:authentication-api
     name: APIs.io Authentication API
     description: >-
       This is the API for authenticating with APIs.io APIs. 
