@@ -1,0 +1,991 @@
+executed: '2024-11-17T01:38:43.408Z'
+results:
+  - code: openapi-external-docs-error
+    message: OpenAPI MUST Have External Documentation
+    path: []
+    severity: 0
+    range:
+      start:
+        line: 0
+        character: 0
+      end:
+        line: 65
+        character: 22
+  - code: openapi-info-license-error
+    message: Info MUST Have License
+    path:
+      - info
+    severity: 0
+    range:
+      start:
+        line: 1
+        character: 5
+      end:
+        line: 9
+        character: 33
+  - code: openapi-info-terms-of-service-error
+    message: Info MUST Have Terms of Service
+    path:
+      - info
+    severity: 0
+    range:
+      start:
+        line: 1
+        character: 5
+      end:
+        line: 9
+        character: 33
+  - code: openapi-info-title-info
+    message: Info Has Title
+    path:
+      - info
+      - title
+    severity: 2
+    range:
+      start:
+        line: 2
+        character: 9
+      end:
+        line: 2
+        character: 35
+  - code: openapi-info-title-upper-case-info
+    message: Info Title MUST Have First Characters Capitalized
+    path:
+      - info
+      - title
+    severity: 2
+    range:
+      start:
+        line: 2
+        character: 9
+      end:
+        line: 2
+        character: 35
+  - code: openapi-info-description-info
+    message: Info Has Description
+    path:
+      - info
+      - description
+    severity: 2
+    range:
+      start:
+        line: 3
+        character: 15
+      end:
+        line: 5
+        character: 26
+  - code: openapi-info-version-info
+    message: Info Has Version
+    path:
+      - info
+      - version
+    severity: 2
+    range:
+      start:
+        line: 6
+        character: 11
+      end:
+        line: 6
+        character: 13
+  - code: openapi-info-contact-info
+    message: Info Has Contact Object
+    path:
+      - info
+      - contact
+    severity: 2
+    range:
+      start:
+        line: 7
+        character: 10
+      end:
+        line: 9
+        character: 33
+  - code: openapi-info-contact-url-error
+    message: Info MUST Have Contact URL
+    path:
+      - info
+      - contact
+    severity: 0
+    range:
+      start:
+        line: 7
+        character: 10
+      end:
+        line: 9
+        character: 33
+  - code: openapi-info-contact-name-info
+    message: Info Has Contact Name
+    path:
+      - info
+      - contact
+      - name
+    severity: 2
+    range:
+      start:
+        line: 8
+        character: 10
+      end:
+        line: 8
+        character: 18
+  - code: openapi-info-contact-email-info
+    message: Info Has Contact Email
+    path:
+      - info
+      - contact
+      - email
+    severity: 2
+    range:
+      start:
+        line: 9
+        character: 11
+      end:
+        line: 9
+        character: 33
+  - code: openapi-tags-object-info
+    message: OpenAPIs Have a Tag Object
+    path:
+      - tags
+    severity: 2
+    range:
+      start:
+        line: 12
+        character: 5
+      end:
+        line: 14
+        character: 51
+  - code: openapi-tags-name-info
+    message: Tags Have a Name
+    path:
+      - tags
+      - '0'
+      - name
+    severity: 2
+    range:
+      start:
+        line: 13
+        character: 10
+      end:
+        line: 13
+        character: 24
+  - code: openapi-tags-description-info
+    message: Tags Have a Description
+    path:
+      - tags
+      - '0'
+      - description
+    severity: 2
+    range:
+      start:
+        line: 14
+        character: 17
+      end:
+        line: 14
+        character: 51
+  - code: openapi-no-api-in-path-error
+    message: No API in Path
+    path:
+      - paths
+      - /token/validation
+    severity: 0
+    range:
+      start:
+        line: 16
+        character: 20
+      end:
+        line: 33
+        character: 21
+  - code: openapi-no-path-trailing-slash-info
+    message: Path Trailing Slash
+    path:
+      - paths
+      - /token/validation
+    severity: 2
+    range:
+      start:
+        line: 16
+        character: 20
+      end:
+        line: 33
+        character: 21
+  - code: openapi-version-in-path-info
+    message: Version in Path
+    path:
+      - paths
+      - /token/validation
+    severity: 2
+    range:
+      start:
+        line: 16
+        character: 20
+      end:
+        line: 33
+        character: 21
+  - code: openapi-operations-summary-info
+    message: Operation Has a Summary
+    path:
+      - paths
+      - /token/validation
+      - post
+      - summary
+    severity: 2
+    range:
+      start:
+        line: 18
+        character: 15
+      end:
+        line: 18
+        character: 42
+  - code: openapi-operations-summary-period-none-info
+    message: Operation Has a Period.
+    path:
+      - paths
+      - /token/validation
+      - post
+      - summary
+    severity: 2
+    range:
+      start:
+        line: 18
+        character: 15
+      end:
+        line: 18
+        character: 42
+  - code: openapi-operations-description-info
+    message: Operation Has Description
+    path:
+      - paths
+      - /token/validation
+      - post
+      - description
+    severity: 2
+    range:
+      start:
+        line: 19
+        character: 19
+      end:
+        line: 19
+        character: 64
+  - code: openapi-operations-operation-ids-camel-case-error
+    message: Operation Identifier MUST Be camelCase
+    path:
+      - paths
+      - /token/validation
+      - post
+      - operationId
+    severity: 0
+    range:
+      start:
+        line: 20
+        character: 19
+      end:
+        line: 20
+        character: 39
+  - code: openapi-operations-operation-ids-camel-case-info
+    message: Operation Identifier Is camelCase
+    path:
+      - paths
+      - /token/validation
+      - post
+      - operationId
+    severity: 2
+    range:
+      start:
+        line: 20
+        character: 19
+      end:
+        line: 20
+        character: 39
+  - code: openapi-operations-operation-ids-info
+    message: Operation Has Identifier
+    path:
+      - paths
+      - /token/validation
+      - post
+      - operationId
+    severity: 2
+    range:
+      start:
+        line: 20
+        character: 19
+      end:
+        line: 20
+        character: 39
+  - code: openapi-operations-tags-info
+    message: Operations Has Tags
+    path:
+      - paths
+      - /token/validation
+      - post
+      - tags
+    severity: 2
+    range:
+      start:
+        line: 21
+        character: 11
+      end:
+        line: 22
+        character: 24
+  - code: openapi-operations-tags-upper-case-info
+    message: Operation Tag Names Have First Letter in Each Word Capitalized
+    path:
+      - paths
+      - /token/validation
+      - post
+      - tags
+      - '0'
+    severity: 2
+    range:
+      start:
+        line: 22
+        character: 10
+      end:
+        line: 22
+        character: 24
+  - code: openapi-request-body-content-on-post-error
+    message: Request Body Content POST
+    path:
+      - paths
+      - /token/validation
+      - post
+      - requestBody
+    severity: 0
+    range:
+      start:
+        line: 23
+        character: 18
+      end:
+        line: 24
+        character: 57
+  - code: openapi-request-body-on-post-info
+    message: POST Requests Has a Body
+    path:
+      - paths
+      - /token/validation
+      - post
+      - requestBody
+    severity: 2
+    range:
+      start:
+        line: 23
+        character: 18
+      end:
+        line: 24
+        character: 57
+  - code: invalid-ref
+    path:
+      - paths
+      - /token/validation
+      - post
+      - requestBody
+      - $ref
+    message: '''#/components/requestBodies/Authentication'' does not exist'
+    severity: 0
+    range:
+      start:
+        line: 24
+        character: 14
+      end:
+        line: 24
+        character: 57
+  - code: openapi-response-post-400-status-code-error
+    message: POST Responses Has 400 Status Codes
+    path:
+      - paths
+      - /token/validation
+      - post
+      - responses
+    severity: 0
+    range:
+      start:
+        line: 25
+        character: 16
+      end:
+        line: 31
+        character: 59
+  - code: openapi-response-post-401-status-code-error
+    message: POST Responses Has 401 Status Codes
+    path:
+      - paths
+      - /token/validation
+      - post
+      - responses
+    severity: 0
+    range:
+      start:
+        line: 25
+        character: 16
+      end:
+        line: 31
+        character: 59
+  - code: openapi-response-post-403-status-code-error
+    message: POST Responses Has 403 Status Codes
+    path:
+      - paths
+      - /token/validation
+      - post
+      - responses
+    severity: 0
+    range:
+      start:
+        line: 25
+        character: 16
+      end:
+        line: 31
+        character: 59
+  - code: openapi-response-post-404-status-code-error
+    message: POST Responses Has 404 Status Codes
+    path:
+      - paths
+      - /token/validation
+      - post
+      - responses
+    severity: 0
+    range:
+      start:
+        line: 25
+        character: 16
+      end:
+        line: 31
+        character: 59
+  - code: openapi-response-post-429-status-code-error
+    message: POST Responses MUST Have 429 Status Codes
+    path:
+      - paths
+      - /token/validation
+      - post
+      - responses
+    severity: 0
+    range:
+      start:
+        line: 25
+        character: 16
+      end:
+        line: 31
+        character: 59
+  - code: openapi-response-post-500-status-code-error
+    message: POST Responses MUST Have 500 Status Codes
+    path:
+      - paths
+      - /token/validation
+      - post
+      - responses
+    severity: 0
+    range:
+      start:
+        line: 25
+        character: 16
+      end:
+        line: 31
+        character: 59
+  - code: openapi-response-post-201-status-code-info
+    message: POST Responses Has 201 Status Codes
+    path:
+      - paths
+      - /token/validation
+      - post
+      - responses
+      - '201'
+    severity: 2
+    range:
+      start:
+        line: 26
+        character: 14
+      end:
+        line: 31
+        character: 59
+  - code: openapi-response-post-201-description-info
+    message: POST 201 Responses Has Description
+    path:
+      - paths
+      - /token/validation
+      - post
+      - responses
+      - '201'
+      - description
+    severity: 2
+    range:
+      start:
+        line: 27
+        character: 23
+      end:
+        line: 27
+        character: 35
+  - code: openapi-response-post-201-content-info
+    message: POST 201 Responses Has Content
+    path:
+      - paths
+      - /token/validation
+      - post
+      - responses
+      - '201'
+      - content
+    severity: 2
+    range:
+      start:
+        line: 28
+        character: 18
+      end:
+        line: 31
+        character: 59
+  - code: openapi-response-post-201-media-type-examples-error
+    message: POST 201 Responses MUST Have Examples
+    path:
+      - paths
+      - /token/validation
+      - post
+      - responses
+      - '201'
+      - content
+      - application/json
+    severity: 0
+    range:
+      start:
+        line: 29
+        character: 29
+      end:
+        line: 31
+        character: 59
+  - code: openapi-response-post-201-media-type-info
+    message: POST 201 Responses Has Media Type
+    path:
+      - paths
+      - /token/validation
+      - post
+      - responses
+      - '201'
+      - content
+      - application/json
+    severity: 2
+    range:
+      start:
+        line: 29
+        character: 29
+      end:
+        line: 31
+        character: 59
+  - code: openapi-response-post-201-media-type-schema-info
+    message: POST 201 Responses Has Schema
+    path:
+      - paths
+      - /token/validation
+      - post
+      - responses
+      - '201'
+      - content
+      - application/json
+      - schema
+    severity: 2
+    range:
+      start:
+        line: 30
+        character: 21
+      end:
+        line: 31
+        character: 59
+  - code: invalid-ref
+    path:
+      - paths
+      - /token/validation
+      - post
+      - responses
+      - '201'
+      - content
+      - application/json
+      - schema
+      - $ref
+    message: '''#/components/schemas/Authentication'' does not exist'
+    severity: 0
+    range:
+      start:
+        line: 31
+        character: 22
+      end:
+        line: 31
+        character: 59
+  - code: openapi-response-post-201-schema-ref-error
+    message: POST 201 Responses MUST Use Schema Reference
+    path:
+      - paths
+      - /token/validation
+      - post
+      - responses
+      - '201'
+      - content
+      - application/json
+      - schema
+      - $ref
+    severity: 0
+    range:
+      start:
+        line: 31
+        character: 22
+      end:
+        line: 31
+        character: 59
+  - code: openapi-operation-security-definitions-info
+    message: Operations MUST Have a Security Definition
+    path:
+      - paths
+      - /token/validation
+      - post
+      - security
+    severity: 2
+    range:
+      start:
+        line: 32
+        character: 15
+      end:
+        line: 33
+        character: 21
+  - code: openapi-components-examples-error
+    message: Components MUST Have a Examples Property
+    path:
+      - components
+    severity: 0
+    range:
+      start:
+        line: 34
+        character: 11
+      end:
+        line: 65
+        character: 22
+  - code: openapi-components-headers-error
+    message: Components MUST Have a Headers Property
+    path:
+      - components
+    severity: 0
+    range:
+      start:
+        line: 34
+        character: 11
+      end:
+        line: 65
+        character: 22
+  - code: openapi-components-parameters-error
+    message: Components MUST Have a Parameters Property
+    path:
+      - components
+    severity: 0
+    range:
+      start:
+        line: 34
+        character: 11
+      end:
+        line: 65
+        character: 22
+  - code: openapi-components-responses-error
+    message: Components MUST have a responses property.
+    path:
+      - components
+    severity: 0
+    range:
+      start:
+        line: 34
+        character: 11
+      end:
+        line: 65
+        character: 22
+  - code: openapi-security-schemes-info
+    message: Components Have a Security Schemes
+    path:
+      - components
+      - securitySchemes
+    severity: 2
+    range:
+      start:
+        line: 42
+        character: 18
+      end:
+        line: 46
+        character: 16
+  - code: openapi-components-schemas-info
+    message: Components Have a Schema Property
+    path:
+      - components
+      - schemas
+    severity: 2
+    range:
+      start:
+        line: 47
+        character: 10
+      end:
+        line: 65
+        character: 22
+  - code: openapi-schema-description-error
+    message: Schema MUST Have a Description.
+    path:
+      - components
+      - schemas
+      - Validate
+    severity: 0
+    range:
+      start:
+        line: 48
+        character: 13
+      end:
+        line: 56
+        character: 23
+  - code: openapi-schema-names-pascal-case-info
+    message: Schema Names Are PascalCase.
+    path:
+      - components
+      - schemas
+      - Validate
+    severity: 2
+    range:
+      start:
+        line: 48
+        character: 13
+      end:
+        line: 56
+        character: 23
+  - code: openapi-schema-type-info
+    message: Schema Has Type Property
+    path:
+      - components
+      - schemas
+      - Validate
+      - type
+    severity: 2
+    range:
+      start:
+        line: 49
+        character: 12
+      end:
+        line: 49
+        character: 18
+  - code: openapi-schema-required-info
+    message: Schema Has Required Property
+    path:
+      - components
+      - schemas
+      - Validate
+      - required
+    severity: 2
+    range:
+      start:
+        line: 50
+        character: 15
+      end:
+        line: 51
+        character: 15
+  - code: openapi-schema-properties-info
+    message: Schema Have Properties
+    path:
+      - components
+      - schemas
+      - Validate
+      - properties
+    severity: 2
+    range:
+      start:
+        line: 52
+        character: 17
+      end:
+        line: 56
+        character: 23
+  - code: openapi-schema-properties-names-camel-case-info
+    message: Schema Property Names Are camelCase.
+    path:
+      - components
+      - schemas
+      - Validate
+      - properties
+      - token
+    severity: 2
+    range:
+      start:
+        line: 53
+        character: 14
+      end:
+        line: 56
+        character: 23
+  - code: openapi-schema-properties-string-maxlength-error
+    message: Schema String Properties MUST Have Maximum Length
+    path:
+      - components
+      - schemas
+      - Validate
+      - properties
+      - token
+    severity: 0
+    range:
+      start:
+        line: 53
+        character: 14
+      end:
+        line: 56
+        character: 23
+  - code: openapi-schema-properties-descriptions-info
+    message: Schema Properties Have Description
+    path:
+      - components
+      - schemas
+      - Validate
+      - properties
+      - token
+      - description
+    severity: 2
+    range:
+      start:
+        line: 55
+        character: 23
+      end:
+        line: 55
+        character: 59
+  - code: openapi-schema-properties-string-minlength-info
+    message: Schema String Properties Has Minimum Length
+    path:
+      - components
+      - schemas
+      - Validate
+      - properties
+      - token
+      - minLength
+    severity: 2
+    range:
+      start:
+        line: 56
+        character: 21
+      end:
+        line: 56
+        character: 23
+  - code: openapi-schema-description-error
+    message: Schema MUST Have a Description.
+    path:
+      - components
+      - schemas
+      - Validation
+    severity: 0
+    range:
+      start:
+        line: 57
+        character: 15
+      end:
+        line: 65
+        character: 22
+  - code: openapi-schema-names-pascal-case-info
+    message: Schema Names Are PascalCase.
+    path:
+      - components
+      - schemas
+      - Validation
+    severity: 2
+    range:
+      start:
+        line: 57
+        character: 15
+      end:
+        line: 65
+        character: 22
+  - code: openapi-schema-type-info
+    message: Schema Has Type Property
+    path:
+      - components
+      - schemas
+      - Validation
+      - type
+    severity: 2
+    range:
+      start:
+        line: 58
+        character: 12
+      end:
+        line: 58
+        character: 18
+  - code: openapi-schema-required-info
+    message: Schema Has Required Property
+    path:
+      - components
+      - schemas
+      - Validation
+      - required
+    severity: 2
+    range:
+      start:
+        line: 59
+        character: 15
+      end:
+        line: 60
+        character: 14
+  - code: openapi-schema-properties-info
+    message: Schema Have Properties
+    path:
+      - components
+      - schemas
+      - Validation
+      - properties
+    severity: 2
+    range:
+      start:
+        line: 61
+        character: 17
+      end:
+        line: 65
+        character: 22
+  - code: openapi-schema-properties-names-camel-case-info
+    message: Schema Property Names Are camelCase.
+    path:
+      - components
+      - schemas
+      - Validation
+      - properties
+      - username
+    severity: 2
+    range:
+      start:
+        line: 62
+        character: 17
+      end:
+        line: 65
+        character: 22
+  - code: openapi-schema-properties-string-maxlength-error
+    message: Schema String Properties MUST Have Maximum Length
+    path:
+      - components
+      - schemas
+      - Validation
+      - properties
+      - username
+    severity: 0
+    range:
+      start:
+        line: 62
+        character: 17
+      end:
+        line: 65
+        character: 22
+  - code: openapi-schema-properties-descriptions-info
+    message: Schema Properties Have Description
+    path:
+      - components
+      - schemas
+      - Validation
+      - properties
+      - username
+      - description
+    severity: 2
+    range:
+      start:
+        line: 64
+        character: 23
+      end:
+        line: 64
+        character: 42
+  - code: openapi-schema-properties-string-minlength-info
+    message: Schema String Properties Has Minimum Length
+    path:
+      - components
+      - schemas
+      - Validation
+      - properties
+      - username
+      - minLength
+    severity: 2
+    range:
+      start:
+        line: 65
+        character: 21
+      end:
+        line: 65
+        character: 22
