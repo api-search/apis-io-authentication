@@ -1,18 +1,5 @@
 aid: apis-io-authentication
-specificationVersion: '0.18'
-name: APIs.io Authentication API
-description: >-
-  This is the contract for the APIs.io Authentication API, automating the
-  authentication across APIs.io API.
-created: '2024-08-20'
-modified: '2024-11-13'
 url: https://github.com/api-search/authentication-api/blob/main/apis.yml
-type: Contract
-position: Producer
-access: 1st-Party
-image: https://kinlane-productions2.s3.amazonaws.com/apis-io/apis-io-api-logo.jpg
-tags:
-  - Authentication
 apis:
   - aid: apis-io-authentication:authentication-api
     name: APIs.io Authentication API
@@ -37,6 +24,12 @@ apis:
     description: >-
       This is the API for managing authentication that are used to govern the
       APIs.io search engine.
+name: APIs.io Authentication API
+tags:
+  - Authentication
+type: Index
+image: https://kinlane-productions2.s3.amazonaws.com/apis-io/apis-io-api-logo.jpg
+access: 3rd-Party
 common:
   - url: https://github.com/api-search/
     type: GitHubOrganization
@@ -103,7 +96,14 @@ common:
   - url: >-
       https://api-evangelist-tools.github.io/apis-io-authentication-api-api-validator/
     type: APIValidation
+created: '2024-08-20'
+modified: '2024-11-20'
+position: Producer
+description: >-
+  This is the contract for the APIs.io Authentication API, automating the
+  authentication across APIs.io API.
 maintainers:
   - FN: Kin Lane
     email: info@apievangelist.com
     X-github: kinlane
+specificationVersion: '0.18'
